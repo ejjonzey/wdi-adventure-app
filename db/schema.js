@@ -9,7 +9,7 @@ mongoose.Promise = global.Promise;
 //keys:types
 
 // User Schema
-var userSchema = new Schema({
+var UserSchema = new Schema({
     first_name: String,
     last_name: String,
     rejects: [String],
@@ -17,7 +17,7 @@ var userSchema = new Schema({
     updated_at: Date,
 });
 
-userSchema.pre('save', function(next) {
+UserSchema.pre('save', function(next) {
     now = new Date();
     this.updated_at = now;
     if (!this.created_at) {
@@ -27,7 +27,7 @@ userSchema.pre('save', function(next) {
 });
 
 // adventure schema
-var adventureSchema = new Schema({
+var AdventureSchema = new Schema({
     categories: String,
     subCategories: String,
     location: String,
@@ -39,7 +39,7 @@ var adventureSchema = new Schema({
     updated_at: Date,
 });
 
-adventureSchema.pre('save', function(next) {
+AdventureSchema.pre('save', function(next) {
     now = new Date();
     this.updated_at = now;
     if (!this.created_at) {
@@ -49,7 +49,7 @@ adventureSchema.pre('save', function(next) {
 });
 
 //Review Schema
-var reviewSchema = new Schema({
+var ReviewSchema = new Schema({
     rating: Boolean,
     user: String,
     created_at: Date,
@@ -58,7 +58,7 @@ var reviewSchema = new Schema({
 });
 
 
-reviewSchema.pre('save', function(next) {
+ReviewSchema.pre('save', function(next) {
     now = new Date();
     this.updated_at = now;
     if (!this.created_at) {
@@ -67,14 +67,14 @@ reviewSchema.pre('save', function(next) {
     next();
 });
 
-var userModel = mongoose.model("user", userSchema);
-var adventureModel = mongoose.model("adventure", adventureSchema);
-var reviewModel = mongoose.model("adventure", adventureSchema);
+var UserModel = mongoose.model("User", UserSchema);
+var AdventureModel = mongoose.model("Adventure", AdventureSchema);
+var ReviewModel = mongoose.model("Review", ReviewSchema);
 
 
 
 module.exports = {
-    user: userModel,
-    adventure: adventureModel,
-    review: reviewModel,
+    User: UserModel,
+    Adventure: AdventureModel,
+    Review: ReviewModel,
 };
