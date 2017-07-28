@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/express-mongoose-lesson-starter');
+mongoose.connect('mongodb://localhost/wdi-adventure-app');
 
 var User = require('../models/user');
 var Review = require('../models/review');
@@ -50,7 +50,7 @@ var cloudlandCanyon = new Adventure({
     updated_at: '04-25-2017'
 })
 
-var reviewnum1 = new review({
+var reviewNum1 = new Review({
     rating: true,
     user: jessica,
     created_at: 02-02-2017,
@@ -107,7 +107,10 @@ var eric = new User({
 
 
 
-
+cloudlandCanyon.save((err) => {
+  if (err) console.log(err);
+  console.log("cloudlandCanyon Saved");
+})
 
 // save the users
 jessica.save(function(err) {
