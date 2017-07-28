@@ -2,7 +2,6 @@ $(function() {
 
 var rotateMarquee = function (index, curMarquee, deleteTime){
     const masterWordList = ["adventure", "eat food", "have a picnic", "play a game", "hiking"]
-    console.log(curMarquee);
     var wordSpelling = masterWordList[index];
     
     if(!deleteTime){
