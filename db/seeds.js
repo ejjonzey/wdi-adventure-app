@@ -149,6 +149,30 @@ var eric = new User({
     updated_at: "04-15-2017"
 });
 
+cloudlandCanyon.save((err) => {
+  if (err) console.log(err);
+  console.log("cloudlandCanyon Saved");
+})
+
+tallulahGorgeStatePark.save((err) => {
+  if (err) console.log(err);
+  console.log("tallulahGorgeStatePark Saved");
+})
+
+AmicalolaFallsStatePark.save((err) => {
+  if (err) console.log(err);
+  console.log("AmicalolaFallsStatePark Saved");
+})
+
+LakeLannierStatePark.save((err) => {
+  if (err) console.log(err);
+  console.log("LakeLannierStatePark Saved");
+})
+
+closeToMyHouseStatePark.save((err) => {
+  if (err) console.log(err);
+  console.log("closeToMyHouseStatePark Saved");
+})
 
 // save the users
 jessica.save(function(err) {
