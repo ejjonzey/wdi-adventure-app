@@ -26,6 +26,13 @@ header, footer {
   width: 100vw;
   text-align: center;
 }
+header {
+  display: flex;
+  justify-content: flex-end;
+}
+.nav {
+  margin: 0 25px;
+}
 .main_image {
   width: 100vw;
   margin: 0;
