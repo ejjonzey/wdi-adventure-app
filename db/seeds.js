@@ -59,10 +59,6 @@ var reviewnum1 = new review({
 })
 
 
-
-
-
-
 Review.remove({}, function(err){
   console.log(err);
 });
@@ -106,9 +102,6 @@ var eric = new User({
 });
 
 
-
-
-
 // save the users
 jessica.save(function(err) {
   if (err) console.log(err);
@@ -133,4 +126,5 @@ eric.save(function(err) {
   
   console.log('Eric created!');
 });
+
 mongoose.connection.close();
