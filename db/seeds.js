@@ -9,8 +9,8 @@ var Adventure = require('../models/adventure')
 mongoose.Promise = global.Promise;
 
 // First we clear the database of existing users, reviews and adventures.
-User.remove({}, function(err){
-  console.log(err);
+User.remove({}, function(err) {
+    console.log(err);
 });
 
 
@@ -101,55 +101,53 @@ var closeToMyHouseStatePark = new Adventure({
 var reviewNum1 = new Review({
     rating: true,
     user: jessica,
-    created_at: 02-02-2017,
-    updated_at: 02-03-2017,
+    created_at: 02 - 02 - 2017,
+    updated_at: 02 - 03 - 2017,
     tip: 'do not eat much. there is no restrooms in this place'
 })
 
 
-Review.remove({}, function(err){
-  console.log(err);
+Review.remove({}, function(err) {
+    console.log(err);
 });
 
-Adventure.remove({}, function(err){
-  console.log(err);
+Adventure.remove({}, function(err) {
+    console.log(err);
 });
 
 
 // create new users
 var jessica = new User({
-  first_name: 'Jessica',
-  last_name: 'Matty',
-  rejects: [ ],
-  created_at: "04-17-2017",
-  updated_at: "06-10-2017"
+    first_name: 'Jessica',
+    last_name: 'Matty',
+    rejects: [],
+    created_at: "04-17-2017",
+    updated_at: "06-10-2017"
 });
 
 var edgar = new User({
-  first_name: 'Edgar',
-  last_name: 'Mendez',  
-  rejects: [ ],
-  created_at: "05-10-2016",
-  updated_at: "06-30-2016"
+    first_name: 'Edgar',
+    last_name: 'Mendez',
+    rejects: [],
+    created_at: "05-10-2016",
+    updated_at: "06-30-2016"
 });
 
 var william = new User({
-  first_name: 'William',
-  last_name: 'Huizenga',
-  rejects: [ ],
-  created_at: "03-10-2016",
-  updated_at: "07-20-2016"
+    first_name: 'William',
+    last_name: 'Huizenga',
+    rejects: [],
+    created_at: "03-10-2016",
+    updated_at: "07-20-2016"
 });
 
 var eric = new User({
-  first_name: 'Eric',
-  last_name: 'Jonelunas',
-  rejects: [ ],
-  created_at: "02-05-2017",
-  updated_at: "04-15-2017"
+    first_name: 'Eric',
+    last_name: 'Jonelunas',
+    rejects: [],
+    created_at: "02-05-2017",
+    updated_at: "04-15-2017"
 });
-
-
 
 cloudlandCanyon.save((err) => {
   if (err) console.log(err);
@@ -176,31 +174,29 @@ closeToMyHouseStatePark.save((err) => {
   console.log("closeToMyHouseStatePark Saved");
 })
 
-
->>>>>>> 3f87622a0d4550c86ad16387b5ff27b7ebefc88c
 // save the users
 jessica.save(function(err) {
-  if (err) console.log(err);
+    if (err) console.log(err);
 
-  console.log('Jessica created!');
+    console.log('Jessica created!');
 });
 
 edgar.save(function(err) {
-  if (err) console.log(err);
+    if (err) console.log(err);
 
-  console.log('Edgar created!');
+    console.log('Edgar created!');
 });
 
 william.save(function(err) {
-  if (err) console.log(err);
-  
-  console.log('William created!');
+    if (err) console.log(err);
+
+    console.log('William created!');
 });
 
 eric.save(function(err) {
-  if (err) console.log(err);
-  
-  console.log('Eric created!');
+    if (err) console.log(err);
+
+    console.log('Eric created!');
 });
 
 mongoose.connection.close();
