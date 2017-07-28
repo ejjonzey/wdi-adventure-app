@@ -63,7 +63,7 @@ var tallulahGorgeStatePark = new Adventure({
 })
 
 var AmicalolaFallsStatePark = new Adventure({
-    categories: 'outdoors',
+    categories: 'indoor',
     subCategories: 'hiking',
     location: 'north west GA',
     title: 'Amicalola Falls State Park and lodge',
@@ -74,6 +74,29 @@ var AmicalolaFallsStatePark = new Adventure({
     updated_at: '04-15-2015'
 })
 
+var LakeLannierStatePark = new Adventure({
+    categories: 'outdoors',
+    subCategories: 'canoeing',
+    location: 'north west GA',
+    title: 'Lake Lannier State Park and lodge',
+    description: 'wonderful for hiking, picnics and have fun with your pets',
+    images: ' ',
+    reviews: ' ',
+    created_at: '03-06-2015',
+    updated_at: '04-15-2015'
+})
+
+var closeToMyHouseStatePark = new Adventure({
+    categories: 'outdoors',
+    subCategories: 'birdwatching',
+    location: 'north west GA',
+    title: 'Close to my house State Park and lodge',
+    description: 'wonderful for hiking, picnics and have fun with your pets',
+    images: ' ',
+    reviews: ' ',
+    created_at: '03-06-2015',
+    updated_at: '04-15-2015'
+})
 
 var reviewNum1 = new Review({
     rating: true,
@@ -133,6 +156,28 @@ cloudlandCanyon.save((err) => {
   console.log("cloudlandCanyon Saved");
 })
 
+tallulahGorgeStatePark.save((err) => {
+  if (err) console.log(err);
+  console.log("tallulahGorgeStatePark Saved");
+})
+
+AmicalolaFallsStatePark.save((err) => {
+  if (err) console.log(err);
+  console.log("AmicalolaFallsStatePark Saved");
+})
+
+LakeLannierStatePark.save((err) => {
+  if (err) console.log(err);
+  console.log("LakeLannierStatePark Saved");
+})
+
+closeToMyHouseStatePark.save((err) => {
+  if (err) console.log(err);
+  console.log("closeToMyHouseStatePark Saved");
+})
+
+
+>>>>>>> 3f87622a0d4550c86ad16387b5ff27b7ebefc88c
 // save the users
 jessica.save(function(err) {
   if (err) console.log(err);
