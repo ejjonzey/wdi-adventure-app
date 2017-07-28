@@ -10,6 +10,11 @@ router.get('/', (req, res) => {
     res.render("adventures/index");
 })
 
+//new adventure
+router.get("/new", (req, res) => {
+    req.render('adventure/new');
+})
+
 //index of subcategories
 router.get('/:oneCategory', (req, res) => {
     const catergoryToSearch = req.params.oneCategory;
@@ -33,8 +38,89 @@ router.get('/:oneCategory', (req, res) => {
     //draw a list of all the subcategories.
 })
 
+//show an adventure
+router.get("/:oneCategory/:adventure", (req, res) => {
+    const idOfAdventure = request.params.adventure;
+
+    Adventure.findById(idOfAdventure)
+        .then((adventure) => {
+            res.render('adventures/show', {
+                adventure
+            })
+        })
+        .catch((err) => {
+            console.log(`An Error has occured showing adventure of ${idOfAdventure}`);
+            console.log(err);
+        });
+});
+
+//update an adventure
+router.put("/:oneCategory/:adventure", (res, req) => {
+    const idOfAdventure = req.params.adventure;
+    const adventureInfo = req.body;
+
+    Adventure.findByIdAndUpdate(
+        idOfAdventure,
+        adventureInfo,
+        {new: true})
+        .then((adventure) => {
+            console.log(`Adventure ${idOfAdventure} has been updated`);
+
+            res.render('adventures/show', {
+                adventure
+            });
+        })
+        .catch((err) => {
+            console.log(`An Error has occured during update of adventure ${idOfAdventure}`);
+            console.log(err);
+        });
+});
 
 
+//edit adventure
+router.get("/:oneCategory/:adventure/:edit", (req, res) => {
+    const adventureToFind = req.params.adventure;
 
+    Adventure.findById(adventureToFind)
+        .then((adventure) => {
+            res.render('adventures/edit',
+                adventure
+            )
+        })
+        .catch((err) => {
+            console.log(`An Error has occured rendering update form of adventure ${idOfAdventure}`);
+            console.log(err);
+        })
+})
+
+
+//create new adventure
+router.post("/", (req, res) => {
+    const newAdventureInformation = req.body;
+
+    Adventure.create(newAdventureInformation)
+        .then((adventure) => {
+            response.render(
+                'adventure/show',
+                adventure
+            )
+        })
+        .catch((err) => {
+            console.log("Error daving new adventure to database");
+            console.log(err);
+        })
+})
+
+//delete an adventure
+router.get("/:oneCategory/:adventure/delete", (req, res) => {
+    const adventureToDelete = req.params.adventure;
+
+    Adventure.findByIdAndRemove(adventureToDelete)
+        .then(() => {
+            console.log(`Adventure ${adventureToDelete} has been deleted`);
+
+            res.redirect('/');
+        })
+})
 
 module.exports = router;
