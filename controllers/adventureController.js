@@ -7,7 +7,7 @@ var User = require("../models/user")
 
 //index of categories
 router.get('/', (req, res) => {
-    res.render("adventures/index");
+    res.render('categories');
 })
 
 //new adventure
