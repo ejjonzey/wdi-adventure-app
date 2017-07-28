@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 
 //new adventure
 router.get("/new", (req, res) => {
-    req.render('adventure/new');
+    res.render('adventure/new');
 })
 
 //index of subcategories
