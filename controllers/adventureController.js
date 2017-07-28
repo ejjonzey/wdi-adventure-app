@@ -40,18 +40,17 @@ router.get('/:oneCategory', (req, res) => {
 
 //show an adventure
 router.get("/:oneCategory/:adventure", (req, res) => {
-    const idOfAdventure = request.params.adventure;
+    const subCatOfAdventure = req.params.adventure;
+    const catOfAdventure = req.params.oneCategory;
 
-    Adventure.findById(idOfAdventure)
-        .then((adventure) => {
+    Adventure.find({'categories': catOfAdventure, 'subCategories': subCatOfAdventure})
+        .then((adventures) => {
+            var randomAdventure = Math.floor(Math.random()*adventures.length);
+            var yourChosenAdventure = adventures[randomAdventure];
             res.render('adventures/show', {
-                adventure
+                adventure: yourChosenAdventure
             })
         })
-        .catch((err) => {
-            console.log(`An Error has occured showing adventure of ${idOfAdventure}`);
-            console.log(err);
-        });
 });
 
 //update an adventure
@@ -78,7 +77,7 @@ router.put("/:oneCategory/:adventure", (res, req) => {
 
 
 //edit adventure
-router.get("/:oneCategory/:adventure/:edit", (req, res) => {
+router.get("/:oneCategory/:adventure/edit", (req, res) => {
     const adventureToFind = req.params.adventure;
 
     Adventure.findById(adventureToFind)
@@ -88,7 +87,7 @@ router.get("/:oneCategory/:adventure/:edit", (req, res) => {
             )
         })
         .catch((err) => {
-            console.log(`An Error has occured rendering update form of adventure ${idOfAdventure}`);
+            console.log(`An Error has occured rendering update form of adventure ${adventureToFind}`);
             console.log(err);
         })
 })
