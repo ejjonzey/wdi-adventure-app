@@ -19,28 +19,28 @@ router.get("/new", (req, res) => {
 router.get('/:oneCategory', (req, res) => {
     const catergoryToSearch = req.params.oneCategory;
     //pull all adventures that match the category
-    Adventure.find({'categories': catergoryToSearch})
+    Adventure.find({ 'categories': catergoryToSearch })
         //pull from that array to return all the subcategories a user could select
         .then((adventures) => {
             var subcats = [];
             //for each adventure
             adventures.forEach((value) => {
-                if(!subcats.includes(value.subCategories)){
+                if (!subcats.includes(value.subCategories)) {
                     subcats.push(value.subCategories);
                 }
             })
             res.render('adventures/subcats', {
                 subcats
             })
-                
-            })
+
+        })
 
     //draw a list of all the subcategories.
 })
 
 //show an adventure
 router.get("/:oneCategory/:adventure", (req, res) => {
-    const idOfAdventure = request.params.adventure;
+    const idOfAdventure = req.params.adventure;
 
     Adventure.findById(idOfAdventure)
         .then((adventure) => {
@@ -60,9 +60,8 @@ router.put("/:oneCategory/:adventure", (res, req) => {
     const adventureInfo = req.body;
 
     Adventure.findByIdAndUpdate(
-        idOfAdventure,
-        adventureInfo,
-        {new: true})
+            idOfAdventure,
+            adventureInfo, { new: true })
         .then((adventure) => {
             console.log(`Adventure ${idOfAdventure} has been updated`);
 
