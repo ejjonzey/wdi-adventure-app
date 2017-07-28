@@ -63,7 +63,7 @@ var tallulahGorgeStatePark = new Adventure({
 })
 
 var AmicalolaFallsStatePark = new Adventure({
-    categories: 'indoor',
+    categories: 'indoors',
     subCategories: 'hiking',
     location: 'north west GA',
     title: 'Amicalola Falls State Park and lodge',
