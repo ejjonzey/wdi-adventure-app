@@ -34,4 +34,12 @@ header, footer {
   font-size: 80px;
   text-align: center;
   font-family: 'Gloria Hallelujah', cursive;
+  margin: 0;
+}
+.title_wrapper{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  height: 200px;
 }

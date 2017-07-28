@@ -9,7 +9,7 @@ var rotateMarquee = function (index, curMarquee, deleteTime){
         $('#marquee').html(curMarquee);
         if(curMarquee.length === wordSpelling.length){
             deleteTime = true;
-            setTimeout(function(){rotateMarquee(index, curMarquee, deleteTime)}, 150);
+            setTimeout(function(){rotateMarquee(index, curMarquee, deleteTime)}, 800);
         }
         if(curMarquee.length < wordSpelling.length){
             curMarquee = curMarquee + wordSpelling.charAt(curMarquee.length);
@@ -24,11 +24,13 @@ var rotateMarquee = function (index, curMarquee, deleteTime){
             } else {
                 index = 0;
             }
-            setTimeout(function(){rotateMarquee(index, curMarquee, deleteTime)}, 300);
+            setTimeout(function(){
+                rotateMarquee(index, curMarquee, deleteTime)}, 300);
         }
         if(curMarquee.length > 0){
             curMarquee = curMarquee.substring(0, curMarquee.length - 1);
-            setTimeout(function(){rotateMarquee(index, curMarquee, deleteTime)}, 150);
+            setTimeout(function(){
+                rotateMarquee(index, curMarquee, deleteTime)}, 150);
         }
     }
 }
