@@ -127,15 +127,12 @@ var eric = new User({
 });
 
 
-<<<<<<< HEAD
-=======
 
 cloudlandCanyon.save((err) => {
   if (err) console.log(err);
   console.log("cloudlandCanyon Saved");
 })
 
->>>>>>> f46951e95db77f1a1bfebc163d73161e779fee80
 // save the users
 jessica.save(function(err) {
   if (err) console.log(err);
