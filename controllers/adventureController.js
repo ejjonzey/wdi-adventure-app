@@ -6,5 +6,9 @@ var Adventure = require("../models/adventure");
 module.exports = router;
 
 router.get('/', (req, res) => {
-    res.send("we made it!");
+    res.render("adventures/index");
+})
+
+router.get('/:subcat', (req, res) => {
+    res.send("We made it to the subcategory page!");
 })
