@@ -19,16 +19,14 @@ router.get('/:oneCategory', (req, res) => {
         .then((adventures) => {
             var subcats = [];
             //for each adventure
-            adventure.forEach((value) => {
+            adventures.forEach((value) => {
                 if(!subcats.includes(value.subCategories)){
                     subcats.push(value.subCategories);
                 }
             })
-            console.log(subcats);
-            //if the sub cat is not on the array of subcats
-            //add it to the list of subcats
-                
-            }
+            res.render('adventures/subcats', {
+                subcats
+            })
                 
             })
 
