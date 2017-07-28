@@ -50,6 +50,31 @@ var cloudlandCanyon = new Adventure({
     updated_at: '04-25-2017'
 })
 
+var tallulahGorgeStatePark = new Adventure({
+    categories: 'outdoors',
+    subCategories: 'hiking',
+    location: 'Tallulah Falls, GA, 30573',
+    title: 'Tallulah Gorge State Park',
+    description: 'deepest canyon east of the mississippi river',
+    images: ' ',
+    reviews: ' ',
+    created_at: '06-25-2017',
+    updated_at: '06-28-2017'
+})
+
+var AmicalolaFallsStatePark = new Adventure({
+    categories: 'outdoors',
+    subCategories: 'hiking',
+    location: 'north west GA',
+    title: 'Amicalola Falls State Park and lodge',
+    description: 'wonderful for hiking, picnics and have fun with your pets',
+    images: ' ',
+    reviews: ' ',
+    created_at: '03-06-2015',
+    updated_at: '04-15-2015'
+})
+
+
 var reviewNum1 = new Review({
     rating: true,
     user: jessica,
