@@ -35,7 +35,7 @@ var rotateMarquee = function (index, curMarquee, deleteTime){
 }
 
 var slideshow = function (){
-    var slideshowList = ["/images/wasteland.jpg", "/images/lightbulbs.jpeg", "/images/tower.jpeg", "/images/hiking.jpeg", "/images/edgar.jpg"];
+    var slideshowList = ["/images/wasteland.jpg", "/images/lightbulbs.jpeg", "/images/tower.jpeg", "/images/hiking.jpeg", "/images/edgar.jpg", "/images/dining.jpg", "/images/greek.jpg", "images/white.jpg", "images/pines.jpeg"];
     var randomImage = Math.floor(Math.random()*slideshowList.length);
     console.log(randomImage);
     console.log(slideshowList[randomImage]);
