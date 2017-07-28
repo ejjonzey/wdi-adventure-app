@@ -9,7 +9,7 @@ var rotateMarquee = function (index, curMarquee, deleteTime){
         $('#marquee').html(curMarquee);
         if(curMarquee.length === wordSpelling.length){
             deleteTime = true;
-            setTimeout(function(){rotateMarquee(index, curMarquee, deleteTime)}, 200);
+            setTimeout(function(){rotateMarquee(index, curMarquee, deleteTime)}, 150);
         }
         if(curMarquee.length < wordSpelling.length){
             curMarquee = curMarquee + wordSpelling.charAt(curMarquee.length);
@@ -19,7 +19,7 @@ var rotateMarquee = function (index, curMarquee, deleteTime){
         $('#marquee').html(curMarquee);
         if(curMarquee.length === 0){
             deleteTime = false;
-            if(index < masterWordList.length){
+            if(index < masterWordList.length-1){
                 index += 1;
             } else {
                 index = 0;
@@ -28,7 +28,7 @@ var rotateMarquee = function (index, curMarquee, deleteTime){
         }
         if(curMarquee.length > 0){
             curMarquee = curMarquee.substring(0, curMarquee.length - 1);
-            setTimeout(function(){rotateMarquee(index, curMarquee, deleteTime)}, 200);
+            setTimeout(function(){rotateMarquee(index, curMarquee, deleteTime)}, 150);
         }
     }
 }
