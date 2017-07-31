@@ -1,44 +1,36 @@
 <div class="mainContainer">
 
-<div class="infoContainer">
+  <div class="infoContainer">
 
-  <div id="adventureTitle"><h1>{{adventure.title}}</h1></div>
+    <div id="adventureTitle">
+      <h1>{{adventure.title}}</h1>
+    </div>
 
-  <div id="adventureImage"><img src=" ">{{adventure.image}}</div>
+    <div id="adventureImage"><img src=" ">{{adventure.image}}</div>
 
-  <div id="adventureDescription">
+    <div id="adventureDescription">
 
-    <h3>{{adventure.description}}</h3>
+      <h3>{{adventure.description}}</h3>
 
+    </div>
   </div>
-</div>
 
   <div class="aside" id="adventureReview">
 
     <div>
-         <h4 id="reviewTitle">Reviews</h4>
-         <p id="reviewParagraph">{{adventure.reviews}}</p>
+      <h4 id="reviewTitle">Reviews</h4>
+      <p id="reviewParagraph">{{adventure.reviews}}</p>
     </div>
 
     <div>
       <button id="thumbsUp"><img src=" "></button>
 
       <button id="thumbsDown"><img src=" "></button>
-   
+
     </div>
 
   </div>
 
-
-
-
-
-
-
-
-
-
-
-
+  <p>See something wrong? <a href="/adventures/edit/{{adventure._id}}/">Update this adventure</a></p>
 
 </div>
