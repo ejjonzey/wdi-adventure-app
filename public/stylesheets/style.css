@@ -26,6 +26,7 @@ footer {
     background: white;
     width: 100vw;
     text-align: center;
+    border: 3px solid black;
 }
 
 header {
@@ -124,6 +125,8 @@ header {
     margin: 15px;
     border: 5px solid white;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .subcategory-title {
@@ -227,4 +230,11 @@ header {
 
 .edit-button {
     margin-left: 15px;
+}
+.only-two-per-page{
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
