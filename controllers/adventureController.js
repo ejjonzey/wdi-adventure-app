@@ -15,6 +15,23 @@ router.get("/new", (req, res) => {
     res.render('adventures/new');
 })
 
+//edit adventure
+router.get("/edit/:adventure/", (req, res) => {
+    console.log('hit edit route')
+    const adventureToFind = req.params.adventure;
+
+    Adventure.findById(adventureToFind)
+        .then((adventure) => {
+            res.render('adventures/edit',
+                adventure
+            )
+        })
+        .catch((err) => {
+            console.log(`An Error has occured rendering update form of adventure ${adventureToFind}`);
+            console.log(err);
+        })
+})
+
 //index of subcategories
 router.get('/:oneCategory', (req, res) => {
     const catergoryToSearch = req.params.oneCategory;
@@ -37,6 +54,7 @@ router.get('/:oneCategory', (req, res) => {
 
     //draw a list of all the subcategories.
 })
+
 
 //show an adventure
 router.get("/:oneCategory/:adventure", (req, res) => {
@@ -76,21 +94,6 @@ router.put("/:oneCategory/:adventure", (res, req) => {
 });
 
 
-//edit adventure
-router.get("/:oneCategory/:adventure/edit", (req, res) => {
-    const adventureToFind = req.params.adventure;
-
-    Adventure.findById(adventureToFind)
-        .then((adventure) => {
-            res.render('adventures/edit',
-                adventure
-            )
-        })
-        .catch((err) => {
-            console.log(`An Error has occured rendering update form of adventure ${adventureToFind}`);
-            console.log(err);
-        })
-})
 
 
 //create new adventure
@@ -101,15 +104,14 @@ router.post("/", (req, res) => {
         .then((adventure) => {
             res.render(
                 'adventures/show',
-                {adventure},
-            );
+                adventure
+            )
         })
         .catch((err) => {
             console.log("Error saving new adventure to database");
             console.log(err);
-
-        });
-});
+        })
+})
 
 //delete an adventure
 router.get("/:oneCategory/:adventure/delete", (req, res) => {

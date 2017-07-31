@@ -1,44 +1,31 @@
 <div class="mainContainer">
 
-<div class="infoContainer">
+  <div class="infoContainer">
 
-  <div id="adventureTitle"><h1>{{adventure.title}}</h1></div>
-
-  <div id="adventureImage"><img src=" ">{{adventure.image}}</div>
-
-  <div id="adventureDescription">
-
-    <h3>{{adventure.description}}</h3>
-
-  </div>
-</div>
-
-  <div class="aside" id="adventureReview">
-
-    <div>
-         <h4 id="reviewTitle">Reviews</h4>
-         <p id="reviewParagraph">{{adventure.reviews}}</p>
+    <div id="adventureTitle">
+      <h1>{{adventure.title}}</h1>
     </div>
-
-    <div>
-      <button id="thumbsUp"><img src=" "></button>
-
-      <button id="thumbsDown"><img src=" "></button>
-   
+    <div class="adventure-info-wrapper">
+      <div class="adventure-info">
+        <img id="adventureImage" src={{adventure.images}}>
+        <div id="adventureDescription">
+          <p class="adventure-description">{{adventure.description}}<p>
+        </div>
+      </div>
+      <div class="review-aside" id="adventureReview">
+        <div>
+          <h4 id="reviewTitle">Reviews</h4>
+          <p id="reviewParagraph">{{adventure.reviews}}</p>
+        </div>
+        <div>
+          <button id="thumbsUp"><img src=" "></button>
+          <button id="thumbsDown"><img src=" "></button>
+        </div>
+      </div>
     </div>
-
   </div>
+  <p class="edit-button" >See something wrong? <a href="/adventures/edit/{{adventure._id}}/">Update this adventure</a></p>
 
 
-
-
-
-
-
-
-
-
-
-
-
+  <p>Dont like this spot at all? <a href='/adventures/delete/{{adventures}}/'>Delete this adventure</a></p>
 </div>
