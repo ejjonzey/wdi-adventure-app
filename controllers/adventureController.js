@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 
 //new adventure
 router.get("/new", (req, res) => {
-    res.render('adventure/new');
+    res.render('adventures/new');
 })
 
 //index of subcategories
@@ -99,16 +99,17 @@ router.post("/", (req, res) => {
 
     Adventure.create(newAdventureInformation)
         .then((adventure) => {
-            response.render(
-                'adventure/show',
-                adventure
-            )
+            res.render(
+                'adventures/show',
+                {adventure},
+            );
         })
         .catch((err) => {
             console.log("Error saving new adventure to database");
             console.log(err);
-        })
-})
+
+        });
+});
 
 //delete an adventure
 router.get("/:oneCategory/:adventure/delete", (req, res) => {
