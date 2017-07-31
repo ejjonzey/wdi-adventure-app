@@ -6,6 +6,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+require('dotnev').config();
+var mongoose = require('mongoose');
+mongoose.connect(process.env.MONGODB_URI);
 
 var index = require('./routes/index');
 var users = require('./routes/users');
