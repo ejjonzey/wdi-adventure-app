@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "wdi-adventure-app",
   "version": "0.0.0",
   "private": true,
@@ -16,4 +17,24 @@
     "morgan": "~1.8.1",
     "serve-favicon": "~2.4.2"
   }
+=======
+    "name": "wdi-adventure-app",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "start": "node ./bin/www"
+    },
+    "dependencies": {
+        "body-parser": "~1.17.1",
+        "cookie-parser": "~1.4.3",
+        "debug": "~2.6.3",
+        "dotenv": "^4.0.0",
+        "express": "~4.15.2",
+        "hbs": "~4.0.1",
+        "mongoose": "^4.11.4",
+        "morgan": "~1.8.1",
+        "nodemon": "^1.11.0",
+        "serve-favicon": "~2.4.2"
+    }
+>>>>>>> 82e77ceea3e11583646df2ea86db3e3ce412124d
 }
