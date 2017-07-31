@@ -17,7 +17,6 @@ router.get("/new", (req, res) => {
 
 //edit adventure
 router.get("/edit/:adventure/", (req, res) => {
-    console.log('hit edit route')
     const adventureToFind = req.params.adventure;
 
     Adventure.findById(adventureToFind)
@@ -28,6 +27,22 @@ router.get("/edit/:adventure/", (req, res) => {
         })
         .catch((err) => {
             console.log(`An Error has occured rendering update form of adventure ${adventureToFind}`);
+            console.log(err);
+        })
+})
+
+//delete an adventure
+router.get("/delete/:adventure/", (req, res) => {
+    const adventureToDelete = req.params.adventure;
+
+    Adventure.findByIdAndRemove(adventureToDelete)
+        .then(() => {
+            console.log(`Adventure ${adventureToDelete} has been deleted`);
+
+            res.redirect('/adventures/');
+        })
+        .cath((err) =>{
+            console.log("error deleting from database");
             console.log(err);
         })
 })
@@ -113,16 +128,5 @@ router.post("/", (req, res) => {
         })
 })
 
-//delete an adventure
-router.get("/:oneCategory/:adventure/delete", (req, res) => {
-    const adventureToDelete = req.params.adventure;
-
-    Adventure.findByIdAndRemove(adventureToDelete)
-        .then(() => {
-            console.log(`Adventure ${adventureToDelete} has been deleted`);
-
-            res.redirect('/');
-        })
-})
 
 module.exports = router;
