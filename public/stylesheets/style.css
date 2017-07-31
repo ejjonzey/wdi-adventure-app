@@ -118,8 +118,10 @@ header {
 }
 
 .mainContainer{
-    max-width: 60%;
+    width: 100%;
     margin: 0 auto;
+    background-color: #c4dad5;
+    min-height: 87vh;
 }
 .adventure-description{
     margin: 0;
@@ -127,6 +129,7 @@ header {
 .adventure-info-wrapper{
     display:flex;
     flex-direction: row;
+    border-radius: 15px;
 }
 .adventure-info{
     flex-grow: 2;
@@ -134,18 +137,29 @@ header {
 .review-aside{
     flex-grow: 1;
     min-width: 20%;
+    margin-left: 20px;
 }
 #adventureTitle {
     font-size: 30px;
+    text-align: center;
+    background-color: #c4dad5;
+    border-radius: 15px;
+    margin: 5px;
 }
 #adventureImage {
-    height: 15vw;
+    height: 25vw;
     border-radius: 15px;
-    border: 2px solid black;
+    border: 2px solid white;
     margin-right: 5px;
     float: left;
+    margin-top: 8px;
+    margin-left: 8px;
 }
 
 #adventureDescription {
  display: inline;
+}
+
+.edit-button{
+    margin-left: 15px;
 }
