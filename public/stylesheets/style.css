@@ -74,6 +74,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #c4dad5;
+    width: 100%;
 }
 
 .outdoors {
@@ -82,7 +84,7 @@ header {
     width: 400px;
     background-size: cover;
     margin: 15px;
-    border: 3px solid black;
+    border: 5px solid white;
 }
 
 .indoors {
@@ -91,16 +93,16 @@ header {
     width: 400px;
     background-size: cover;
     margin: 15px;
-    border: 3px solid black;
+    border: 5px solid white;
 }
 
 .dining {
-    background-image: url();
+    background-image: url('/images/banana.jpg');
     height: 300px;
     width: 400px;
     background-size: cover;
     margin: 15px;
-    border: 3px solid black;
+    border: 5px solid white;
 }
 
 .catText {
