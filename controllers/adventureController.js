@@ -104,15 +104,14 @@ router.post("/", (req, res) => {
         .then((adventure) => {
             res.render(
                 'adventures/show',
-                {adventure},
-            );
+                adventure
+            )
         })
         .catch((err) => {
             console.log("Error saving new adventure to database");
             console.log(err);
-
-        });
-});
+        })
+})
 
 //delete an adventure
 router.get("/:oneCategory/:adventure/delete", (req, res) => {
