@@ -103,7 +103,7 @@ router.post("/", (req, res) => {
     Adventure.create(newAdventureInformation)
         .then((adventure) => {
             res.render(
-                'adventure/show',
+                'adventures/show',
                 adventure
             )
         })
