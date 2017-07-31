@@ -74,7 +74,7 @@ var AmicalolaFallsStatePark = new Adventure({
     updated_at: '04-15-2015'
 })
 
-var LakeLannierStatePark = new Adventure({
+var LakeLanierStatePark = new Adventure({
     categories: 'outdoors',
     subCategories: 'canoeing',
     location: 'north west GA',
