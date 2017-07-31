@@ -17,7 +17,7 @@ router.get("/new", (req, res) => {
 })
 
 
-// SHOW A USER
+// SHOW A USER  /////////////////////////
 
 router.get("/:id", (req, res) => {
     const idOfUser = request.params.user;
