@@ -95,7 +95,7 @@ header {
 }
 
 .dining {
-    background-image: url('/images/dining.jpg');
+    background-image: url();
     height: 300px;
     width: 400px;
     background-size: cover;
