@@ -102,17 +102,16 @@ router.post("/", (req, res) => {
 
     Adventure.create(newAdventureInformation)
         .then((adventure) => {
-            res.render(
-                'adventures/show',
-                {adventure},
-            );
+            response.render(
+                'adventure/show',
+                adventure
+            )
         })
         .catch((err) => {
-            console.log("Error saving new adventure to database");
+            console.log("Error daving new adventure to database");
             console.log(err);
-
-        });
-});
+        })
+})
 
 //delete an adventure
 router.get("/:oneCategory/:adventure/delete", (req, res) => {
