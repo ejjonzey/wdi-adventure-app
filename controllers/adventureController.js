@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 var Adventure = require("../models/adventure");
-var User = require("../models/user")
+//var User = require("../models/user")
 
 
 //index of categories
@@ -88,7 +88,7 @@ router.get("/:oneCategory/:adventure/:edit", (req, res) => {
             )
         })
         .catch((err) => {
-            console.log(`An Error has occured rendering update form of adventure ${idOfAdventure}`);
+            console.log(`An Error has occured rendering update form of adventure ${adventureToFind}`);
             console.log(err);
         })
 })
@@ -106,7 +106,7 @@ router.post("/", (req, res) => {
             )
         })
         .catch((err) => {
-            console.log("Error daving new adventure to database");
+            console.log("Error saving new adventure to database");
             console.log(err);
         })
 })
