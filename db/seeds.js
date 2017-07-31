@@ -43,8 +43,8 @@ var cloudlandCanyon = new Adventure({
     subCategories: 'hiking',
     location: 'north west GA',
     title: 'Cloudland Canyon State Park',
-    description: 'nice park for hiking on the GA mountains',
-    images: ' ',
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam provident qui veniam, tempora a quas hic cumque eveniet, odit vel ipsa. Iusto qui aperiam repellat in, hic nobis consequuntur obcaecati! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam provident qui veniam, tempora a quas hic cumque eveniet, odit vel ipsa. Iusto qui aperiam repellat in, hic nobis consequuntur obcaecati!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam provident qui veniam, tempora a quas hic cumque eveniet, odit vel ipsa. Iusto qui aperiam repellat in, hic nobis consequuntur obcaecati! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam provident qui veniam, tempora a quas hic cumque eveniet, odit vel ipsa. Iusto qui aperiam repellat in, hic nobis consequuntur obcaecati! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam provident qui veniam, tempora a quas hic cumque eveniet, odit vel ipsa. Iusto qui aperiam repellat in, hic nobis consequuntur obcaecati! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam provident qui veniam, tempora a quas hic cumque eveniet, odit vel ipsa. Iusto qui aperiam repellat in, hic nobis consequuntur obcaecati!",
+    images: 'https://2wzlm92dvpgd3a560m9ue6tx-wpengine.netdna-ssl.com/images/cloudland-canyon-sittons-gulch-trail/1-cloudland-canyon-sittons-gulch-trail.jpg',
     reviews: ' ',
     created_at: '03-22-2017',
     updated_at: '04-25-2017'
@@ -150,28 +150,28 @@ var eric = new User({
 });
 
 cloudlandCanyon.save((err) => {
-  if (err) console.log(err);
-  console.log("cloudlandCanyon Saved");
+    if (err) console.log(err);
+    console.log("cloudlandCanyon Saved");
 })
 
 tallulahGorgeStatePark.save((err) => {
-  if (err) console.log(err);
-  console.log("tallulahGorgeStatePark Saved");
+    if (err) console.log(err);
+    console.log("tallulahGorgeStatePark Saved");
 })
 
 AmicalolaFallsStatePark.save((err) => {
-  if (err) console.log(err);
-  console.log("AmicalolaFallsStatePark Saved");
+    if (err) console.log(err);
+    console.log("AmicalolaFallsStatePark Saved");
 })
 
-LakeLannierStatePark.save((err) => {
-  if (err) console.log(err);
-  console.log("LakeLannierStatePark Saved");
+LakeLanierStatePark.save((err) => {
+    if (err) console.log(err);
+    console.log("LakeLanierStatePark Saved");
 })
 
 closeToMyHouseStatePark.save((err) => {
-  if (err) console.log(err);
-  console.log("closeToMyHouseStatePark Saved");
+    if (err) console.log(err);
+    console.log("closeToMyHouseStatePark Saved");
 })
 
 // save the users

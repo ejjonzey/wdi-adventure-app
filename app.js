@@ -40,6 +40,8 @@ app.use('/', index);
 app.use('/users', usersController);
 app.use('/adventures', adventureController);
 app.use('/users/edit', usersController);
+app.use('/adventures/delete', adventureController);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
