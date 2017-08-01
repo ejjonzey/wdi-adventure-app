@@ -220,3 +220,8 @@ header {
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.time-stamp{
+    font-size: 10px;
+    text-align: center;
+}
