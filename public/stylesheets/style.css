@@ -44,11 +44,13 @@ header {
 }
 
 .title {
-    font-size: 80px;
+    font-size: 100px;
     text-align: center;
-    font-family: 'Special Elite', sans-serif;
+    font-family: 'Shrikhand', cursive;
     margin: 0;
-    color: #d1a827;
+    font-weight: bolder;
+    color: #ffe57f;
+    text-shadow: rgba(67, 71, 56, 1) 2px;
 }
 
 .main-categories {
@@ -107,7 +109,7 @@ header {
     position: relative;
     text-align: center;
     padding-bottom: 20px;
-    font-family: 'Cutive Mono', monospace;
+    font-family: 'Shrikhand', regular;
     letter-spacing: 5px;
     display: flex;
     align-items: center;
@@ -160,7 +162,7 @@ header {
 }
 
 .hiking {
-    background-image: url('/images/hikers.jpeg')
+    background-image: url('/images/hikers.jpg')
 }
 
 .camping {
