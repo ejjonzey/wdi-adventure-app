@@ -1,10 +1,55 @@
-<p class="new-user">Add New User</p>
-
 <form action="/users/" method="POST">
-    <input type="text" placeholder="First Name" name="first_name">
-    <input type="text" placeholder="Last Name" name="last_name">
-    <input type="text" placeholder="User Id" name="user_id">
-    <input type="text" placeholder="user Password" name="user_pass">    
 
-    <input type="submit" value="Submit new User Information">
-</form>
+
+<div id='updateConatiner'>
+<div class="container">
+  <div class="row header">
+    <h1>Create Yourself &nbsp;</h1>
+    <h3>Give us your details, we'll make you an object!</h3>
+  </div>
+  <div class="row body">
+    <form action="#">
+      <ul>
+        
+        <li>
+          <p class="left">
+            <label for="First Name">First Name</label>
+            <input type="text" name="First Name" placeholder="First Name"/>
+          </p>
+        </li>
+        <li>
+          <p class="pull-right">
+            <label for="Last Name">Last Name</label>
+            <input type='text' name='last Name' placeholder='Last Name'/>     
+         </p>
+        </li>
+        
+        <li>
+          <p>
+            <label for="User ID">User ID</label>
+            <input type="User ID" name="User ID" placeholder="User ID" />
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <label for="User password">User Password</label>
+            <input type="User ID" name="User ID" placeholder="User Password" />
+          </p>
+        </li>
+
+        <li>
+          <label for="Description">Tell us about yourself!</label>
+          <textarea cols="50" rows="10" name="comments"></textarea>
+        </li>
+        
+        <li>
+          <input class="btn btn-submit" type="submit" value="Submit" />
+          <small>or press <strong>enter</strong></small>
+        </li>
+        
+      </ul>
+    </form>  
+  </div>
+</div>
+</div>
