@@ -15,9 +15,10 @@ router.get("/edit/:adventure/", (req, res) => {
         const adventureToFind = req.params.adventure;
         Adventure.findById(adventureToFind)
             .then((adventure) => {
-                res.render('adventures/edit',
-                    adventure
-                )
+                console.log(adventure);
+                res.render('adventures/edit', {
+                    adventure,
+                });
             })
             .catch((err) => {
                 console.log(`An Error has occured rendering update form of adventure ${adventureToFind}`);
@@ -39,9 +40,9 @@ router.get("/delete/:adventure/", (req, res) => {
     })
     //index of subcategories
 router.get('/:oneCategory', (req, res) => {
-        const catergoryToSearch = req.params.oneCategory;
+        const categoryToSearch = req.params.oneCategory;
         //pull all adventures that match the category
-        Adventure.find({ 'categories': catergoryToSearch })
+        Adventure.find({ 'categories': categoryToSearch })
             //pull from that array to return all the subcategories a user could select
             .then((adventures) => {
                 var subcats = [];
@@ -52,7 +53,8 @@ router.get('/:oneCategory', (req, res) => {
                     }
                 })
                 res.render('adventures/subcats', {
-                    subcats
+                    subcats,
+                    category: categoryToSearch
                 })
             })
             //draw a list of all the subcategories.
@@ -71,8 +73,9 @@ router.get("/:oneCategory/:adventure", (req, res) => {
         })
 });
 //update an adventure
-router.put("/:oneCategory/:adventure", (res, req) => {
-    const idOfAdventure = req.params.adventure;
+router.put("/edit/:adventureId", (req, res) => {
+    console.log(req.params.adventureId);
+    const idOfAdventure = req.params.adventureId;
     const adventureInfo = req.body;
     Adventure.findByIdAndUpdate(
             idOfAdventure,
@@ -91,10 +94,11 @@ router.put("/:oneCategory/:adventure", (res, req) => {
 //create new adventure
 router.post("/", (req, res) => {
     const newAdventureInformation = req.body;
+    console.log(newAdventureInformation);
     Adventure.create(newAdventureInformation)
         .then((adventure) => {
             res.render(
-                'adventures/show',
+                'categories',
                 adventure
             )
         })
