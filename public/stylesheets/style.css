@@ -259,3 +259,22 @@ header {
     width: 60px;
     height: 60px;
 }
+
+.create-title {
+    font-family: 'Shrikhand', cursive;
+    font-size: 40px;
+    text-align: center;
+}
+
+.create-fillForm {
+    font-family: 'Special Elite', sans-serif;
+    font-size: 20px;
+}
+
+.create-container {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    background-color: #81d4fa;
+    border: 8px solid #ffd180;
+    border-radius: 15px;
+}
