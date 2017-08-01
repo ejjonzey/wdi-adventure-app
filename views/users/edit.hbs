@@ -1,6 +1,6 @@
 <p class="edit-user">EditUser</p>
 
-<form action="/users/edit?_method=PUT">
+<form action="users/edit/{{user._id}}?_method=PUT">
     <input type="text" placeholder="First Name" value="{{user.first_name}}">
     <input type="text" placeholder="Last Name" value="{{user.last_name}}">
     <input type="text" placeholder="User Id" value="{{user.user_id}}">
