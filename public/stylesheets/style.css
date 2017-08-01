@@ -184,6 +184,22 @@ header {
     opacity: 0.7;
 }
 
+.museum {
+    background-image: url("/images/museum.jpg")
+}
+
+.breakfast {
+    background-image: url("/images/breakfast.jpg")
+}
+
+.lunch {
+    background-image: url("/images/lunch.jpg")
+}
+
+.dinner {
+    background-image: url("/images/dinner.jpg")
+}
+
 .mainContainer {
     width: 100%;
     margin: 0 auto;
@@ -277,4 +293,5 @@ header {
     background-color: #81d4fa;
     border: 8px solid #ffd180;
     border-radius: 15px;
+    git
 }
