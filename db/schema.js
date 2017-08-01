@@ -35,11 +35,11 @@ UserSchema.pre('save', function(next) {
 // adventure schema
 var AdventureSchema = new Schema({
     categories: String,
-    subCategories: String,
+    subCategories: {type: String, lowercase: true},
     location: String,
     title: String,
     description: String,
-    images: [String],
+    images: String,
     reviews: [String],
     created_at: Date,
     updated_at: Date,
@@ -50,6 +50,9 @@ AdventureSchema.pre('save', function(next) {
     this.updated_at = now;
     if (!this.created_at) {
         this.created_at = now;
+    }
+    if (!this.images) {
+        this.images = "https://pbs.twimg.com/profile_images/600060188872155136/st4Sp6Aw.jpg"
     }
     next();
 });
@@ -76,8 +79,6 @@ ReviewSchema.pre('save', function(next) {
 var UserModel = mongoose.model("User", UserSchema);
 var AdventureModel = mongoose.model("Adventure", AdventureSchema);
 var ReviewModel = mongoose.model("Review", ReviewSchema);
-
-
 
 module.exports = {
     User: UserModel,
