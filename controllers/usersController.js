@@ -19,7 +19,7 @@ router.get("/new", (req, res) => {
 
 // EDIT USER  ///////////////////////////
 
-router.get("/edit/:id", (req, res) => {
+router.get("/:id", (req, res) => {
         console.log("You hit the user edit route");
       const userToFind = req.params.id;
       console.log( `finding this user id ${userToFind}`)
@@ -53,8 +53,8 @@ router.get("/:id", (req, res) => {
 
 // UPDATE A USER   ///////////////////////
 
-router.put("/:id", (res, req) => {
-    const idOfUser = req.params.user;
+router.put("/:id", (req, res) => {
+    const idOfUser = req.params.id;
     const userInfo = req.body;
 
     User.findByIdAndUpdate(
@@ -75,9 +75,6 @@ router.put("/:id", (res, req) => {
 });
 
 
-// EDIT USER  ///////////////////////////
-
-
 // CREATE NEW USER  /////////////////////
 
 router.post("/", (req, res) => {
@@ -89,7 +86,7 @@ router.post("/", (req, res) => {
                 'users/show',
                 user
             )
-        })
+        })  
         .catch((err) => {
             console.log("Error saving new user to database");
             console.log(err);

@@ -8,7 +8,9 @@ TRELLO: link to page: https://trello.com/b/3I9a72vE/wdi-project-2
 
 GITHUB: link to page: https://github.com/ejjonzey/wdi-adventure-app
 
-WIREFRAME: ????
+WIREFRAME: ???? hosted somewhere linked here
+
+PORTFOLIO: a link in your portfolio site
 
 
 
