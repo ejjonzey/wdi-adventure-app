@@ -12,6 +12,8 @@ mongoose.Promise = global.Promise;
 var UserSchema = new Schema({
     first_name: String,
     last_name: String,
+    user_id: String,
+    user_pass: String,
     rejects: [String],
     created_at: Date,
     updated_at: Date,
