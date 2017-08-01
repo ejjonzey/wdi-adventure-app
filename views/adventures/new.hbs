@@ -1,15 +1,48 @@
-<p class="suggest-new-adventure">Suggest New Adventure</p>
-
-<form action="/adventures/" method="POST">
-    <input type="text" placeholder="Adventure Title" name="title">
-    <select name="categories">
+<div id='newAdventureConatiner'>
+<div class="container">
+  <div class="row header">
+    <h1>Create a New Adventure &nbsp;</h1>
+    <h3>Fill out the form below, make a new spot!</h3>
+  </div>
+  <div class="row body">
+    <form action="#">
+      <ul>
+        
+        <li>
+          <p class="left">
+            <label for="Adventure-title">Adventure Title</label>
+            <input type="text" name="Adventure-title" placeholder="Name" />
+          </p>
+        </li>
+        <li>
+          <p class="pull-right">
+            <label for="Adventure-type">Adventure-type</label>
+        <select name='categories'>
         <option value="indoors">indoors</option>
         <option value="outdoors">outdoors</option>
         <option value="dining">dining</option>
-    </select>
-    <input type="text" placeholder="subcategory" name="subCategories">
-    <input type="text" placeholder="Where is this" name="location">
-    <input type="text" placeholder="link to image" name="images">
-    <input type="text" placeholder="Please describe this adventure" name="description">
-    <input type="submit" value="Submit new Adventure">
-</form>
+        </select>         
+         </p>
+        </li>
+        
+        <li>
+          <p>
+            <label for="Activities">Activities</label>
+            <input type="Activities" name="Activities" placeholder="Activities" />
+          </p>
+        </li>        
+        <li>
+          <label for="comments">comments</label>
+          <textarea cols="50" rows="10" name="comments"></textarea>
+        </li>
+        
+        <li>
+          <input class="btn btn-submit" type="submit" value="Submit" />
+          <small>or press <strong>enter</strong></small>
+        </li>
+        
+      </ul>
+    </form>  
+  </div>
+</div>
+</div>
