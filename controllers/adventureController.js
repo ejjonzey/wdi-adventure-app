@@ -15,9 +15,10 @@ router.get("/edit/:adventure/", (req, res) => {
         const adventureToFind = req.params.adventure;
         Adventure.findById(adventureToFind)
             .then((adventure) => {
-                res.render('adventures/edit',
-                    adventure
-                )
+                console.log(adventure);
+                res.render('adventures/edit', {
+                    adventure,
+                });
             })
             .catch((err) => {
                 console.log(`An Error has occured rendering update form of adventure ${adventureToFind}`);
@@ -71,8 +72,9 @@ router.get("/:oneCategory/:adventure", (req, res) => {
         })
 });
 //update an adventure
-router.put("/:oneCategory/:adventure", (res, req) => {
-    const idOfAdventure = req.params.adventure;
+router.put("/edit/:adventureId", (req, res) => {
+    console.log(req.params.adventureId);
+    const idOfAdventure = req.params.adventureId;
     const adventureInfo = req.body;
     Adventure.findByIdAndUpdate(
             idOfAdventure,
