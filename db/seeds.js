@@ -63,7 +63,7 @@ var tallulahGorgeStatePark = new Adventure({
 })
 
 var AmicalolaFallsStatePark = new Adventure({
-    categories: 'indoors',
+    categories: 'outdoors',
     subCategories: 'hiking',
     location: 'north west GA',
     title: 'Amicalola Falls State Park and lodge',
@@ -76,7 +76,7 @@ var AmicalolaFallsStatePark = new Adventure({
 
 var LakeLanierStatePark = new Adventure({
     categories: 'outdoors',
-    subCategories: 'canoeing',
+    subCategories: 'biking',
     location: 'north west GA',
     title: 'Lake Lannier State Park and lodge',
     description: 'wonderful for hiking, picnics and have fun with your pets',
@@ -88,11 +88,23 @@ var LakeLanierStatePark = new Adventure({
 
 var closeToMyHouseStatePark = new Adventure({
     categories: 'outdoors',
-    subCategories: 'birdwatching',
+    subCategories: 'camping',
     location: 'north west GA',
     title: 'Close to my house State Park and lodge',
     description: 'wonderful for hiking, picnics and have fun with your pets',
     images: ' ',
+    reviews: ' ',
+    created_at: '03-06-2015',
+    updated_at: '04-15-2015'
+})
+
+var HighMuseumOfArt = new Adventure({
+    categories: 'indoors',
+    subCategories: 'museums',
+    location: 'Midtown Atlanta, GA',
+    title: 'The High Museum of Art',
+    description: 'The leading art museum in the Southeastern United States. With more than 15,000 works of art in its permanent collection, the High has an extensive anthology of 19th- and 20th-century American and decorative art; significant holdings of European paintings; a growing collection of African American art; and burgeoning collections of modern and contemporary art, photography, folk art and African art. The High is also dedicated to supporting and collecting works by Southern artists',
+    images: "/images/highmuseum.jpg",
     reviews: ' ',
     created_at: '03-06-2015',
     updated_at: '04-15-2015'

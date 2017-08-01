@@ -20,6 +20,10 @@ var UserSchema = new Schema({
 });
 
 UserSchema.pre('save', function(next) {
+    if (!this.images) {
+        this.images = "/images/piper.jpg"
+    }
+
     now = new Date();
     this.updated_at = now;
     if (!this.created_at) {
