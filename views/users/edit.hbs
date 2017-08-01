@@ -1,0 +1,10 @@
+<p class="edit-user">EditUser</p>
+
+<form action="/users/edit/" method="PUT">
+    <input type="text" placeholder="First Name" value="{{user.first_name}}">
+    <input type="text" placeholder="Last Name" value="{{user.last_name}}">
+    <input type="text" placeholder="User Id" value="{{user.user_id}}">
+    <input type="text" placeholder="user Password" value="{{user.user_pass}}">    
+
+    <input type="submit" value="Submit Edited User Information">
+</form>
